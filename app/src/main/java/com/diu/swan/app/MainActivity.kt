@@ -8,6 +8,7 @@ import com.diu.swan.app.databinding.ActivityDocListBinding
 import com.diu.swan.app.databinding.ActivityMainBinding
 import com.diu.swan.app.ui.Constants
 import com.diu.swan.app.ui.doctor.DocList
+import com.diu.swan.app.ui.hospital.HosList
 import com.diu.swan.app.ui.models.Ambulance
 import com.diu.swan.app.ui.models.Hospital
 import com.google.firebase.database.FirebaseDatabase
@@ -24,6 +25,13 @@ class MainActivity : AppCompatActivity() {
         binding.findDoc.setOnClickListener {
             startActivity(Intent(applicationContext  , DocList::class.java))
         }
+
+        binding.allDoc.setOnClickListener {
+            startActivity(Intent(applicationContext  , HosList::class.java))
+
+        }
+
+
 
     }
 }
