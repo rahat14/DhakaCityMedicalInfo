@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "508703883468",
+    "firebase_url": "https://dhakacitymedicalinfo-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "dhakacitymedicalinfo",
+    "storage_bucket": "dhakacitymedicalinfo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508703883468:android:dd3ff34d2e500bd04e4269",
+        "android_client_info": {
+          "package_name": "com.diu.swan.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508703883468-mnp7n6c88ahkrn8abg5vlre5c6lj8fck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.diu.swan.app",
+            "certificate_hash": "e7134e9e771c4552820851631487affe4d0ba29b"
+          }
+        },
+        {
+          "client_id": "508703883468-r5hparkisoersm2n5esuj1hcsv4m32b3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_CElwQyZlI3epazaFn7ztPRynlruSg0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508703883468-r5hparkisoersm2n5esuj1hcsv4m32b3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

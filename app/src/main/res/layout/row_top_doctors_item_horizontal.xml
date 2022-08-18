@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="130dp"
+    android:layout_marginHorizontal="@dimen/_2sdp"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    tools:targetApi="P">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="60dp"
+            android:src="@drawable/user"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/doctorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:layout_toRightOf="@id/profile_image"
+            android:fontFamily="@font/raleway_regular"
+            android:text="Mrs.Demo"
+            android:textColor="@color/black_txt"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/doctorCat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doctorName"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/profile_image"
+            android:ellipsize="end"
+            android:fontFamily="@font/raleway_bold"
+            android:maxLines="2"
+            android:minLines="1"
+            android:text="General Practitioner"
+            android:textColor="@color/sub_txt"
+            android:textSize="14sp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/book_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@+id/doctorCat"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/raleway_regular"
+            android:text="Details"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:cornerRadius="6dp" />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

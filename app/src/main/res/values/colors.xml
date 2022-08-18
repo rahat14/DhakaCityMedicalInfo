@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#BB92EE</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue1">@color/teal_700</color>
+    <color name="blue2">#CB0F8F8E</color>
+    <color name="txt_clr">#FF090F47</color>
+    <color name="sub_txt_clr">#73090F47</color>
+
+    <color name="green">#388E3C</color>
+    <color name="lightGreen">#4CAF50</color>
+    <color name="txt">#FF1E1C61</color>
+    <color name="ShapebackColor">#E6EFF9</color>
+    <color name="black_txt">#FF172331</color>
+    <color name="sub_txt">#A61E1C61</color>
+    <color name="btn_bg">#FFEF716B</color>
+    <color name="blue">@color/teal_700</color>
+    <color name="orange">#F44336</color>
+    <color name="orange2">#FF9800</color>
+    <color name="Darkblue">@color/teal_700</color>
+    <color name="grey_600">#757575</color>
+    <!--    <color name="blue">#FF4B7FFB</color>-->
+    <!--    <color name="blue">#FF0D53FC</color> -->
+    <color name="background_et">#FFF3F4F8</color>
+    <color name="background">#FFE6EFF9</color>
+    <color name="grey">#FF8C8FA5</color>
+    <color name="textClor">#6A8096</color>
+    <color name="grey_10">#ffe6e6e6</color>
+    <color name="grey_90">#ff263238</color>
+    <color name="grey_40">#ff999999</color>
+    <color name="greyish">#D0CECE</color>
+    <color name="black_txt_50">#CC24374C</color>
+
+</resources>
