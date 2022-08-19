@@ -12,16 +12,16 @@
         <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/font/lato.xml" value="0.36666666666666664" />
         <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/activity_Hospital_details.xml" value="0.33645833333333336" />
         <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/activity_ambulance_list.xml" value="0.33645833333333336" />
+        <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/activity_contact_us.xml" value="0.33645833333333336" />
         <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/activity_doc_details.xml" value="0.33645833333333336" />
         <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/activity_doc_list.xml" value="0.33645833333333336" />
         <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/activity_hos_list.xml" value="0.32135416666666666" />
         <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/activity_hospital_details.xml" value="0.33645833333333336" />
         <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/activity_main.xml" value="0.33645833333333336" />
         <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/activity_spalsh_screen.xml" value="0.33645833333333336" />
+        <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/fragment_contact_us.xml" value="0.33645833333333336" />
         <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/row_for_ambulance.xml" value="0.33541666666666664" />
         <entry key="..\:/CLient/DhakaCityMedicalInfo/app/src/main/res/layout/row_top_doctors_item_horizontal.xml" value="0.33645833333333336" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3182291666666667" />
-        <entry key="app/src/main/res/layout/row_top_doctors_item_horizontal.xml" value="0.3182291666666667" />
       </map>
     </option>
   </component>

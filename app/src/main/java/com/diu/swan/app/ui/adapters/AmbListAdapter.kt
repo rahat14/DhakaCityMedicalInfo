@@ -6,33 +6,31 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.diu.swan.app.R
-import com.diu.swan.app.ui.models.Doctor
-import com.google.android.material.button.MaterialButton
+import com.diu.swan.app.databinding.RowForAmbulanceBinding
+import com.diu.swan.app.ui.models.Ambulance
 
-class DocListAdapter(
+class AmbListAdapter(
     private val interaction: Interaction? = null
 ) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>(), Filterable {
-    var lstAddress: List<Doctor> = emptyList()
-    var MainList: List<Doctor> = emptyList()
-    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Doctor>() {
+    var lstAddress: List<Ambulance> = emptyList()
+    var MainList: List<Ambulance> = emptyList()
+    private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Ambulance>() {
 
         override fun areItemsTheSame(
-            oldItem: Doctor,
-            newItem: Doctor
+            oldItem: Ambulance,
+            newItem: Ambulance
         ): Boolean {
             return oldItem.id == newItem.id
         }
 
         override fun areContentsTheSame(
-            oldItem: Doctor,
-            newItem: Doctor
+            oldItem: Ambulance,
+            newItem: Ambulance
         ): Boolean {
             return oldItem == newItem
         }
@@ -43,15 +41,14 @@ class DocListAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
-            return ViewHolder(
-                LayoutInflater.from(parent.context).inflate(
-                    R.layout.row_top_doctors_item_horizontal,
-                    parent,
-                    false
-                ),
-                interaction
-            )
-
+        return ViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.row_for_ambulance,
+                parent,
+                false
+            ),
+            interaction
+        )
 
 
     }
@@ -68,15 +65,15 @@ class DocListAdapter(
         return differ.currentList.size
     }
 
-    fun submitList(list: List<Doctor>) {
+    fun submitList(list: List<Ambulance>) {
         differ.submitList(ArrayList(list))
     }
 
-    fun setParentList(list: List<Doctor>) {
+    fun setParentList(list: List<Ambulance>) {
         MainList = list
     }
 
-    fun getList(): List<Doctor?> {
+    fun getList(): List<Ambulance?> {
         return MainList
     }
 
@@ -85,25 +82,24 @@ class DocListAdapter(
         itemView: View,
         private val interaction: Interaction?
     ) : RecyclerView.ViewHolder(itemView) {
-        val docImage: ImageView = itemView.findViewById(R.id.profile_image)
-        val name: TextView = itemView.findViewById(R.id.doctorName)
-        val doctorCat: TextView = itemView.findViewById(R.id.doctorCat)
-        val bookButton: MaterialButton = itemView.findViewById(R.id.book_button)
-        fun bind(item: Doctor) {
+
+        val binding = RowForAmbulanceBinding.bind(itemView)
+
+        fun bind(item: Ambulance) {
             itemView.setOnClickListener {
-              //  interaction?.onItemSelected(adapterPosition, item)
-            }
-            bookButton.setOnClickListener {
                 interaction?.onItemSelected(adapterPosition, item)
             }
-            name.text = item.name
-            doctorCat.text = item.degree
+
+
+            binding.tvTitle.text = item.name.toString()
+            binding.phone.text = item.phone.toString()
+
 
         }
     }
 
     interface Interaction {
-        fun onItemSelected(position: Int, item: Doctor)
+        fun onItemSelected(position: Int, item: Ambulance)
     }
 
     override fun getFilter(): Filter {
@@ -114,15 +110,12 @@ class DocListAdapter(
 
                 } else {
                     val searchChr = charSequence.toString().lowercase()
-                    val resultData: MutableList<Doctor> = ArrayList()
+                    val resultData: MutableList<Ambulance> = ArrayList()
 
                     for (userModel in getList()) {
                         if (userModel?.name?.isNotEmpty() == true) {
                             if (userModel.name.toString().lowercase()
-                                    .contains(searchChr) || userModel.degree?.lowercase()
-                                    ?.contains(
-                                        searchChr
-                                    ) == true
+                                    .contains(searchChr)
                             ) {
                                 resultData.add(userModel)
                             }
@@ -139,8 +132,9 @@ class DocListAdapter(
             }
 
             override fun publishResults(charSequence: CharSequence, filterResults: FilterResults) {
+                Log.d("TAG", "publishResults: ${filterResults.count} ")
                 if (filterResults.count > 0) {
-                    val filteredList = filterResults.values as List<Doctor>
+                    val filteredList = filterResults.values as List<Ambulance>
 
                     submitList(filteredList)
                 } else {

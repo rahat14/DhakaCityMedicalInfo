@@ -1,5 +1,7 @@
 package com.diu.swan.app.ui.models
 
+import java.io.Serializable
+
 data class Doctor(
     var id: Long? = null ,
     var name : String? = null ,
@@ -9,4 +11,4 @@ data class Doctor(
     var specalist : String? = null ,
     var details: String? =null
 
-)
+): Serializable

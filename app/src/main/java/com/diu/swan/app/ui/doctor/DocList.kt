@@ -1,7 +1,9 @@
 package com.diu.swan.app.ui.doctor
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.diu.swan.app.databinding.ActivityDocListBinding
 import com.diu.swan.app.ui.Constants
@@ -22,12 +24,34 @@ class DocList : AppCompatActivity(), DocListAdapter.Interaction {
         binding = ActivityDocListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.backBtn.setOnClickListener {
+            finish()
+        }
+
+
         mAdapter = DocListAdapter(this)
 
         binding.docList.apply {
             adapter = mAdapter
             layoutManager = LinearLayoutManager(this@DocList)
         }
+
+        binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+
+            override fun onQueryTextChange(newText: String): Boolean {
+
+                if(binding.searchBar.query.isEmpty()){
+                    mAdapter.submitList(docList)
+                }else mAdapter.filter.filter(newText.lowercase())
+                return false
+            }
+
+            override fun onQueryTextSubmit(query: String): Boolean {
+
+                return false
+            }
+
+        })
     }
 
 
@@ -65,6 +89,10 @@ class DocList : AppCompatActivity(), DocListAdapter.Interaction {
     }
 
     override fun onItemSelected(position: Int, item: Doctor) {
+
+        startActivity(Intent(applicationContext, DocDetails::class.java).apply {
+            putExtra("model", item)
+        })
 
     }
 

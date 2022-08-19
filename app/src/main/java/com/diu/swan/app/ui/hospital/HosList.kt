@@ -1,15 +1,13 @@
 package com.diu.swan.app.ui.hospital
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.diu.swan.app.R
-import com.diu.swan.app.databinding.ActivityDocListBinding
 import com.diu.swan.app.databinding.ActivityHosListBinding
 import com.diu.swan.app.ui.Constants
-import com.diu.swan.app.ui.adapters.DocListAdapter
 import com.diu.swan.app.ui.adapters.HosListAdapter
-import com.diu.swan.app.ui.models.Doctor
 import com.diu.swan.app.ui.models.Hospital
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -32,6 +30,29 @@ class HosList : AppCompatActivity(), HosListAdapter.Interaction {
             adapter = mAdapter
             layoutManager = LinearLayoutManager(this@HosList)
         }
+
+        binding.backBtn.setOnClickListener {
+            finish()
+        }
+
+
+        binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+
+            override fun onQueryTextChange(newText: String): Boolean {
+
+                if(binding.searchBar.query.isEmpty()){
+                    mAdapter.submitList(docList)
+                }else mAdapter.filter.filter(newText.lowercase())
+                return false
+            }
+
+            override fun onQueryTextSubmit(query: String): Boolean {
+
+                return false
+            }
+
+        })
+
     }
 
     override fun onStart() {
@@ -69,6 +90,9 @@ class HosList : AppCompatActivity(), HosListAdapter.Interaction {
 
     override fun onItemSelected(position: Int, item: Hospital) {
 
+        startActivity(Intent(applicationContext, HospitalDetails::class.java).apply {
+            putExtra("model", item)
+        })
     }
 
 

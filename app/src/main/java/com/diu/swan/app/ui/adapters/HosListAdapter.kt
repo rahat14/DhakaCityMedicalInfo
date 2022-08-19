@@ -137,17 +137,22 @@ class HosListAdapter(
                     }
                     Log.d("TAG", "size: ${resultData.size}")
                     filterResults.values = resultData
+                    filterResults.count = resultData.size
                 }
                 return filterResults
             }
 
             override fun publishResults(charSequence: CharSequence, filterResults: FilterResults) {
-                val FillteredList = filterResults.values as List<Hospital>
+                if (filterResults.count > 0) {
+                    val filteredList = filterResults.values as List<Hospital>
+
+                    submitList(filteredList)
+                } else {
+
+                    submitList(emptyList())
+                }
 
 
-                // Log.d("TAG", "publishResults: ${filterResults.count} ")
-                //  notifyDataSetChanged()
-                submitList(FillteredList)
             }
         }
     }

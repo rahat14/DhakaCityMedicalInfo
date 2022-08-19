@@ -53,9 +53,9 @@
     </style>
 
     <style name="viewLineStyle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">10dp</item>
-        <item name="android:background">#4d4d4d</item>
+        <item name="android:layout_width">@dimen/_55sdp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#d4d4d4</item>
     </style>
 
 </resources>

@@ -26,10 +26,10 @@
             <TextView
                 android:id="@+id/tv_title"
                 style="@style/testStyle"
-                android:text="name_name"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical|left"
+                android:text="name_name"
                 android:textColor="@color/black" />
 
 
@@ -39,15 +39,17 @@
             android:id="@+id/view"
             style="@style/viewLineStyle"
             android:layout_below="@+id/ll_view"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="0dp" />
 
         <TextView
-            android:id="@+id/tv_add_setting"
+            android:id="@+id/phone"
             style="@style/testsecondStyle"
             android:layout_below="@+id/view"
+            android:layout_marginTop="@dimen/_4sdp"
             android:drawablePadding="10dp"
             android:gravity="center_vertical"
             android:text="Additional_setting"

@@ -67,6 +67,7 @@
                         android:id="@+id/doc_image1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="@drawable/hospital"
                         android:scaleType="centerCrop" />
                 </com.google.android.material.card.MaterialCardView>
 
@@ -96,7 +97,7 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="2dp"
                         android:fontFamily="@font/raleway_bold"
-                        android:text="Doc TYpe"
+                        android:text="Estd."
                         android:textColor="@color/sub_txt"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -106,6 +107,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
+                        android:visibility="gone"
                         android:layout_marginTop="2dp"
                         android:fontFamily="@font/raleway_bold"
                         android:text="DEGREE"
@@ -119,6 +121,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="2dp"
+                        android:visibility="gone"
                         android:fontFamily="@font/raleway_regular"
                         android:text="BMDC Reg: "
                         android:textColor="@color/sub_txt"
