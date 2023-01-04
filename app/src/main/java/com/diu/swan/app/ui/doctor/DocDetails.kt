@@ -23,8 +23,12 @@ class DocDetails : AppCompatActivity() {
         binding.DocDegree.text = model?.degree.toString()
         binding.DocCat.text = model?.specalist.toString()
         binding.bmdcNo.text = "BMDC No : "  + model?.bmdc.toString()
-        binding.locDetais.text = model?.details.toString()
+        binding.locDetais.text = model?.details.toString().replace("/n" , "\n")
         binding.contact.text = model?.phone.toString()
+
+
+
+
 
 
     }

@@ -67,7 +67,7 @@
                         android:id="@+id/doc_image1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/hospital"
+                        android:background="@drawable/hospitla"
                         android:scaleType="centerCrop" />
                 </com.google.android.material.card.MaterialCardView>
 
@@ -224,6 +224,17 @@
 
 
             </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/locationBtn"
+                android:text="Check Locaiton"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginHorizontal="@dimen/_52sdp"
+                android:layout_marginVertical="@dimen/_16sdp"
+                android:layout_height="@dimen/_40sdp"/>
 
 
         </LinearLayout>

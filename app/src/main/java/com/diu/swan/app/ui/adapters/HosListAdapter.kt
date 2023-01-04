@@ -100,7 +100,7 @@ class HosListAdapter(
             name.text = item.name
             HospitalCat.text = item.phone
 
-            docImage.setImageDrawable(ContextCompat.getDrawable(itemView.context , R.drawable.hospital))
+            docImage.setImageDrawable(ContextCompat.getDrawable(itemView.context , R.drawable.hospitla))
 
 
         }

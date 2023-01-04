@@ -8,6 +8,8 @@ data class Hospital(
     var phone : String? = null ,
     var address : String? = null,
     var estd : Int? = null,
-    var details: String? =null
+    var details: String? =null,
+    var lat: Double? = 0.0,
+    var lng: Double? = 0.0
 
 ):Serializable

@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/hind_siliguri_medium"
-            android:text="Doctors"
+            android:text="Hospital"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -50,7 +50,7 @@
         android:visibility="visible"
         app:iconifiedByDefault="false"
         app:queryBackground="@android:color/transparent"
-        app:queryHint="Search Doctor..." />
+        app:queryHint="Search Hospital..." />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/docList"

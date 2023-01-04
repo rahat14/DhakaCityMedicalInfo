@@ -43,15 +43,14 @@ class DocListAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
-            return ViewHolder(
-                LayoutInflater.from(parent.context).inflate(
-                    R.layout.row_top_doctors_item_horizontal,
-                    parent,
-                    false
-                ),
-                interaction
-            )
-
+        return ViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.row_top_doctors_item_horizontal,
+                parent,
+                false
+            ),
+            interaction
+        )
 
 
     }
@@ -89,15 +88,15 @@ class DocListAdapter(
         val name: TextView = itemView.findViewById(R.id.doctorName)
         val doctorCat: TextView = itemView.findViewById(R.id.doctorCat)
         val bookButton: MaterialButton = itemView.findViewById(R.id.book_button)
+
+
         fun bind(item: Doctor) {
-            itemView.setOnClickListener {
-              //  interaction?.onItemSelected(adapterPosition, item)
-            }
+
             bookButton.setOnClickListener {
                 interaction?.onItemSelected(adapterPosition, item)
             }
             name.text = item.name
-            doctorCat.text = item.degree
+            doctorCat.text = item.specalist
 
         }
     }
@@ -119,7 +118,12 @@ class DocListAdapter(
                     for (userModel in getList()) {
                         if (userModel?.name?.isNotEmpty() == true) {
                             if (userModel.name.toString().lowercase()
-                                    .contains(searchChr) || userModel.degree?.lowercase()
+                                    .contains(searchChr)
+                                || userModel.specalist?.lowercase()
+                                    ?.contains(
+                                        searchChr
+                                    ) == true
+                                || userModel.degree?.lowercase()
                                     ?.contains(
                                         searchChr
                                     ) == true
