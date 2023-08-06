@@ -109,9 +109,6 @@ class DocList : AppCompatActivity(), DocListAdapter.Interaction {
                  specialFilter = specilist[position]
 
 
-
-
-
             }
 
         }

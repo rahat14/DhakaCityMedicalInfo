@@ -18,12 +18,6 @@ class SpalshScreen : AppCompatActivity() {
         setContentView(R.layout.activity_spalsh_screen)
 
 
-
-
-
-
-
-
         Handler(Looper.getMainLooper()).postDelayed({
             /* Create an Intent that will start the Menu-Activity. */
             startActivity(Intent(applicationContext, MainActivity::class.java))

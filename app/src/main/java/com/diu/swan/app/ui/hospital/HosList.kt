@@ -64,8 +64,10 @@ class HosList : AppCompatActivity(), HosListAdapter.Interaction {
 
         val mref = FirebaseDatabase.getInstance(Constants.link).getReference("hospitals")
         docList.clear()
+
         mref.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+
                 for (postSnapshot in snapshot.children) {
                     val model = postSnapshot.getValue(Hospital::class.java)
                     if (model != null) {

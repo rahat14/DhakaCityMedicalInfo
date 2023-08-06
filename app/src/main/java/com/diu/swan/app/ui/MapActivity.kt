@@ -27,6 +27,8 @@ class MapActivity : AppCompatActivity() {
         val mapFragment = supportFragmentManager.findFragmentById(
             R.id.google_map
         ) as? SupportMapFragment
+
+
         mapFragment?.getMapAsync { googleMap ->
             addMarkers(googleMap)
         }
@@ -36,8 +38,9 @@ class MapActivity : AppCompatActivity() {
     }
 
 
+
     private fun addMarkers(googleMap: GoogleMap) {
-        var lat = LatLng(intent.getDoubleExtra("lat" ,0.0) , intent.getDoubleExtra("lng" ,0.0))
+        val lat = LatLng(intent.getDoubleExtra("lat" ,0.0) , intent.getDoubleExtra("lng" ,0.0))
        // places.forEach { place ->
             val marker = googleMap.addMarker(
                 MarkerOptions()
